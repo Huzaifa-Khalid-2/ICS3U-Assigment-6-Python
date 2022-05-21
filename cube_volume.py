@@ -1,34 +1,44 @@
-import math
+#!/usr/bin/env python3
+
+# Created by: Huzaifa Khalid
+# Created on: March 2022
+# This program calculates the area of a cube
 
 
-def cube_volume(length):
-    # this function calculates the volume of a cube
+def vol(length):
+    # This functions calculates volume
 
-    # process
     volume = length**3
-
     return volume
 
 
 def main():
-    # this function accepts cube length
+    # This function receives input
 
-    # input
+    # Input
     while True:
         length_str = input("Enter Length (cm): ")
         try:
-            length = float(length_str)
+            length_int = float(length_str)
         except Exception:
-            print("That is not a number, please input a number!")
+            print("That is not a number you dunce, please input a number!")
             print("")
         else:
-            if length <= 0:
-                print("You have not inputted a valid base length, please input"" a positive number!")
+            if length_int <= 0:
+                print("Your length value must be a positive you dunce!")
                 print("")
             else:
                 break
-    print("\nDone.")
+    print("")
+
+    # Call Functions
+    volume = vol(length_int)
+
+    # Output
+    print("")
+    print("Volume is {0}cm^3".format(volume))
 
 
 if __name__ == "__main__":
     main()
+
