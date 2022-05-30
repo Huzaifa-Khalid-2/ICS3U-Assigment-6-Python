@@ -21,15 +21,14 @@ def main():
         try:
             length_int = float(length_str)
         except Exception:
-            print("That is not a number you dunce, please input a number!")
+            print("\nThat is not a number you dunce! try again")
             print("")
         else:
             if length_int <= 0:
-                print("Your length value must be a positive you dunce!")
+                print("\nlength value must be a positive you dunce! try again")
                 print("")
             else:
                 break
-    print("")
 
     # Call Functions
     volume = vol(length_int)
